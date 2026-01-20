@@ -29,10 +29,10 @@ question_dict = {
     'funding': 'How much money in total has been allocated for the programs? (if millions, write out full number. E.g. "1 million" should be 1000000)',
     'responsible_party': 'What Maryland State agency, department, office, or role is responsible for implementing the programs?',
     'stakeholders': 'What population will be impacted by the bill?',
-    'innovative_summary': 'How innovative (employing new technologies or new approaches to government) is the program?',
-    'innovative_score': 'How innovative is the program on a scale from 1 to 10, with 10 being the most innovative?',
-    'child_poverty_direct_summary': 'How high is the potential for the program to have a direct impact on child poverty?',
-    'child_poverty_direct_score': 'How high is the potential for the program to have a direct impact on child poverty on a scale from 1 to 10, with 10 being highest potential?',
+    # 'innovative_summary': 'How innovative (employing new technologies or new approaches to government) is the program?',
+    # 'innovative_score': 'How innovative is the program on a scale from 1 to 10, with 10 being the most innovative?',
+    # 'child_poverty_direct_summary': 'How high is the potential for the program to have a direct impact on child poverty?',
+    # 'child_poverty_direct_score': 'How high is the potential for the program to have a direct impact on child poverty on a scale from 1 to 10, with 10 being highest potential?',
 }
 
 
@@ -56,10 +56,10 @@ class AnswersToQuestions(BaseModel):
     funding: Optional[float] = None
     responsible_party: str
     stakeholders: str
-    innovative_summary: str
-    innovative_score: int
-    child_poverty_direct_summary: str
-    child_poverty_direct_score: int
+    # innovative_summary: str
+    # innovative_score: int
+    # child_poverty_direct_summary: str
+    # child_poverty_direct_score: int
 
 
 def main(args):
@@ -68,7 +68,7 @@ def main(args):
     # Set default model names if not provided
     if args.model is None:
         if model_family == 'gemini':
-            model_name = 'gemini-2.5-flash'
+            model_name = 'gemini-3-flash-preview'
         elif model_family == 'gpt':
             model_name = 'gpt-4.1-nano'
         else:
@@ -105,17 +105,38 @@ def main(args):
         bill_filepath = os.path.join(md_dir, f"{bill_number}_amended.md")
         if not os.path.exists(bill_filepath):
             bill_filepath = os.path.join(md_dir, f"{bill_number}.md")
-        with open(bill_filepath, 'r', encoding='utf-8') as b_f:
-            bill_md = b_f.read()
-        model_response = query_llm_with_retries(
-            client=client,
-            prompt=SYSTEM_PROMPT,
-            value=bill_md,
-            response_format=AnswersToQuestions,
-            model_name=model_name,
-            max_retries=3,
-            model_family=model_family
-        )
+        
+        try:
+            with open(bill_filepath, 'r', encoding='utf-8') as b_f:
+                bill_md = b_f.read()
+            
+            model_response = query_llm_with_retries(
+                client=client,
+                prompt=SYSTEM_PROMPT,
+                value=bill_md,
+                response_format=AnswersToQuestions,
+                model_name=model_name,
+                max_retries=3,
+                model_family=model_family
+            )
+            
+            # Ensure we handle cases where the LLM returns None despite retries
+            if model_response is None:
+                raise ValueError("LLM returned None")
+
+        except Exception as e:
+            # Fallback dictionary if file is missing or LLM fails
+            model_response = {
+                'bill_summary': 'No text available to analyze.',
+                'programmatic': False,
+                'program_start_year': None,
+                'program_end_year': None,
+                'funding': None,
+                'responsible_party': 'N/A',
+                'stakeholders': 'N/A'
+            }
+            print(f"Error processing {bill_number}: {e}")
+
         model_responses.append(model_response)
 
     response_df = pd.DataFrame.from_records(model_responses)
@@ -129,8 +150,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         prog='Legislative scan question answerer',
         description='A program to answer questions about legislation')
-    parser.add_argument('--model-family', default='gemini', choices=['gpt', 'gemini', 'ollama'], help='The LLM backend family to use')
-    parser.add_argument('--model', default=None, help='The model name to use (e.g., gpt-4.1-nano, gemini-2.5-flash, llama3, etc.)')
+    parser.add_argument('--model-family', default='gemini', choices=['gemini', 'gpt', 'ollama'], help='The LLM backend family to use')
+    parser.add_argument('--model', default=None, help='The model name to use (e.g., gemini-3-flash-preview, gpt-4.1-nano, llama3, etc.)')
     parser.add_argument('session_year', type=int, help='The regular session year')
     args = parser.parse_args()
     main(args)
