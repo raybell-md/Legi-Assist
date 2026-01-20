@@ -21,7 +21,7 @@ def main(session_year):
     leg_data = response.json()
 
     if session_year == 2026:
-        filtered_leg_data = [leg for leg in leg_data if leg['PassedByMGA']]
+        filtered_leg_data = leg_data
     else:
         filtered_leg_data = [leg for leg in leg_data if leg['ChapterNumber'] != '']
 
