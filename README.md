@@ -1,6 +1,6 @@
-# Legi-Scanner
+# Legi-Assist
 
-Legi-Scanner is a toolkit developed by the Maryland State Innovation Team to automate the collection, processing, analysis, and summarization of Maryland General Assembly legislation. It downloads legislative data, converts it into machine-readable formats, applies amendments, and leverages large language models (LLMs) to answer policy-relevant questions about bills. The toolkit is designed to support policy analysis, research, and innovation in government.
+Legi-Assist is a toolkit developed by the Maryland State Innovation Team to automate the collection, processing, analysis, and summarization of Maryland General Assembly legislation. It downloads legislative data, converts it into machine-readable formats, applies amendments, and leverages large language models (LLMs) to answer policy-relevant questions about bills. The toolkit is designed to support policy analysis, research, and innovation in government.
 
 ## Installation
 
