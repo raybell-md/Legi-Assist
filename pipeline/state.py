@@ -32,7 +32,9 @@ class PipelineState:
                 "needs_qa": False,
                 "files": {},
                 "qa_results": None,
-                "amended_status": "original" # original, amended, failed
+                "amended_status": "original", # original, amended, failed
+                "amend_input_hash": None,
+                "qa_input_hash": None
             }
         return self.data[bill_number]
 

@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import json
+import hashlib
 from pydantic import BaseModel
 from typing import Optional, List, Literal
 from llm_utils import query_llm_with_retries
@@ -132,6 +133,15 @@ def run_qa(session_year: int, bill_number: str, state_manager, client, model_nam
         print(f"No text, JSON info, or Fiscal Note available for QA: {bill_number}")
         return
 
+    # Check hash to see if input changed
+    current_hash = hashlib.sha256(bill_md.encode('utf-8')).hexdigest()
+    bill_state = state_manager.get_bill(bill_number)
+    
+    if bill_state.get('qa_input_hash') == current_hash and bill_state.get('qa_results'):
+        print(f"[{bill_number}] No changes in QA input. Skipping QA stage.")
+        state_manager.update_bill(bill_number, {"needs_qa": False})
+        return
+
     print(f"Running QA on {bill_number}...")
     try:
         # 1. General QA
@@ -173,7 +183,8 @@ def run_qa(session_year: int, bill_number: str, state_manager, client, model_nam
         if qa_data:
             state_manager.update_bill(bill_number, {
                 "qa_results": qa_data,
-                "needs_qa": False
+                "needs_qa": False,
+                "qa_input_hash": current_hash
             })
             
     except Exception as e:

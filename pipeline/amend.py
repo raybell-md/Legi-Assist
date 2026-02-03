@@ -1,4 +1,5 @@
 import os
+import hashlib
 from google import genai
 from glob import glob
 from llm_utils import query_llm_with_retries
@@ -34,9 +35,29 @@ def apply_amendments(session_year: int, bill_number: str, state_manager, client,
     # Sort amendments (logic might differ, but alphabetical usually works for id)
     amd_files.sort()
     
-    current_bill_md = ""
+    # Calculate hash of inputs to determine if we need to re-run LLM
+    hasher = hashlib.sha256()
     with open(bill_path, 'r', encoding='utf-8') as f:
-        current_bill_md = f.read()
+        bill_content = f.read()
+        hasher.update(bill_content.encode('utf-8'))
+    
+    for amd_file in amd_files:
+        with open(amd_file, 'r', encoding='utf-8') as f:
+            hasher.update(f.read().encode('utf-8'))
+    
+    current_hash = hasher.hexdigest()
+    bill_state = state_manager.get_bill(bill_number)
+    amended_path = os.path.join(md_dir, f"{bill_number}_amended.md")
+
+    if bill_state.get('amend_input_hash') == current_hash and os.path.exists(amended_path):
+        print(f"[{bill_number}] No changes in bill or amendments. Skipping amend stage.")
+        state_manager.update_bill(bill_number, {
+            "needs_amend": False,
+            "needs_qa": True
+        })
+        return
+
+    current_bill_md = bill_content
 
     # Apply sequentially
     for amd_file in amd_files:
@@ -75,5 +96,6 @@ def apply_amendments(session_year: int, bill_number: str, state_manager, client,
     state_manager.update_bill(bill_number, {
         "needs_amend": False,
         "needs_qa": True,
-        "amended_status": "amended"
+        "amended_status": "amended",
+        "amend_input_hash": current_hash
     })
