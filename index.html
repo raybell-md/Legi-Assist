@@ -575,13 +575,15 @@
                         MGA_Link: `https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/${b.BillNumber}?ys=${selectedYear.value}RS`,
                         Agency_Rating: getRelevance(b)?.relevance_rating || '',
                         Relevance_Note: getRelevance(b)?.relevance_explanation || '',
-                        Summary: b.bill_summary,
-                        Fiscal_Impact: b.fiscal_impact_summary,
-                        Funding: b.funding,
-                        Sponsor: b.SponsorPrimary,
-                        Status: b.Status,
-                        Broad_Subjects: b.BroadSubjects.map(s => s.Name).join('; '),
-                        Narrow_Subjects: b.NarrowSubjects.map(s => s.Name).join('; ')
+                        Summary: b.bill_summary || '',
+                        Fiscal_Impact: b.fiscal_impact_summary || '',
+                        // Check if funding is null/undefined; if so, print empty string instead of "null"
+                        Funding: (b.funding !== null && b.funding !== undefined) ? b.funding : '',
+                        Sponsor: b.SponsorPrimary || '',
+                        Status: b.Status || '',
+                        // Add safety checks (?.) to ensure map doesn't fail on missing arrays
+                        Broad_Subjects: b.BroadSubjects?.map(s => s.Name).join('; ') || '',
+                        Narrow_Subjects: b.NarrowSubjects?.map(s => s.Name).join('; ') || ''
                     }));
 
                     if (rows.length === 0) return;
@@ -596,6 +598,9 @@
                     link.href = URL.createObjectURL(blob);
                     link.download = `MD_Legislation_Export_${selectedYear.value}.csv`;
                     link.click();
+                    
+                    // Good practice: Revoke the object URL after download to free up memory
+                    setTimeout(() => URL.revokeObjectURL(link.href), 100);
                 };
 
                 onMounted(() => {
