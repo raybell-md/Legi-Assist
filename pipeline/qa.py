@@ -6,6 +6,24 @@ from typing import Optional, List, Literal
 from llm_utils import query_llm_with_retries
 import csv
 
+_legislation_json_cache = {}
+
+def get_bill_json_info(session_year, bill_number):
+    """Retrieves bill info from the master legislation.json file, with caching."""
+    if session_year not in _legislation_json_cache:
+        json_path = os.path.abspath(f'data/{session_year}rs/legislation.json')
+        if os.path.exists(json_path):
+            try:
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    _legislation_json_cache[session_year] = {b['BillNumber']: b for b in data}
+            except Exception as e:
+                print(f"Error loading {json_path}: {e}")
+                _legislation_json_cache[session_year] = {}
+        else:
+            _legislation_json_cache[session_year] = {}
+    return _legislation_json_cache[session_year].get(bill_number)
+
 # Load agencies for validation
 agencies_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'maryland_agencies.csv')
 agencies_df = pd.read_csv(agencies_path)
@@ -80,19 +98,39 @@ def run_qa(session_year: int, bill_number: str, state_manager, client, model_nam
     if not os.path.exists(bill_path):
         bill_path = os.path.join(md_dir, f"{bill_number}.md")
     
-    if not os.path.exists(bill_path):
-        print(f"No text available for QA: {bill_number}")
-        return
+    bill_md = ""
+    if os.path.exists(bill_path):
+        with open(bill_path, 'r', encoding='utf-8') as f:
+            bill_md = f.read()
+    else:
+        # Fallback to legislation.json
+        bill_info = get_bill_json_info(session_year, bill_number)
+        if bill_info:
+            title = bill_info.get('Title', '')
+            synopsis = bill_info.get('Synopsis', '')
+            broad = [s.get('Name') for s in bill_info.get('BroadSubjects', [])]
+            narrow = [s.get('Name') for s in bill_info.get('NarrowSubjects', [])]
+            
+            bill_md = f"# {title}\n\n"
+            bill_md += f"## Synopsis\n{synopsis}\n\n"
+            if broad:
+                bill_md += f"Broad Subjects: {', '.join(broad)}\n"
+            if narrow:
+                bill_md += f"Narrow Subjects: {', '.join(narrow)}\n"
 
-    with open(bill_path, 'r', encoding='utf-8') as f:
-        bill_md = f.read()
-
-    # Load Fiscal Note if available
+    # Load Fiscal Note if available (always try to append it)
     fn_path = os.path.join(md_dir, f"{bill_number}_fn.md")
     if os.path.exists(fn_path):
         with open(fn_path, 'r', encoding='utf-8') as f:
             fn_md = f.read()
-        bill_md += f"\n\nFISCAL NOTE:\n{fn_md}"
+        if bill_md:
+            bill_md += f"\n\nFISCAL NOTE:\n{fn_md}"
+        else:
+            bill_md = f"FISCAL NOTE:\n{fn_md}"
+
+    if not bill_md:
+        print(f"No text, JSON info, or Fiscal Note available for QA: {bill_number}")
+        return
 
     print(f"Running QA on {bill_number}...")
     try:
