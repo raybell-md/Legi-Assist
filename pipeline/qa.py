@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 import hashlib
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List, Literal
 from llm_utils import query_llm_with_retries
 import csv
@@ -44,6 +44,7 @@ class AgencyRelevance(BaseModel):
     agency_name: Literal[tuple(unique_agencies)]
     is_relevant: bool
     relevance_explanation: str
+    relevance_rating: int = Field(description="Relevance rating from 1 to 5, with 5 being the most relevant")
 
 class AgencyAnalysis(BaseModel):
     relevant_agencies: List[AgencyRelevance]
@@ -75,6 +76,7 @@ def get_agency_prompt(agencies_text):
         "For EACH agency in the list, determine if the bill is relevant to their work or has a notable fiscal impact on them, "
         "based on the provided Agency Summary.\n\n"
         "Return a list of ONLY the agencies that are relevant or impacted.\n\n"
+        "For each relevant agency, provide a relevance_rating from 1 to 5, where 5 is the most relevant (e.g., they are the primary implementing agency) and 1 is low relevance (e.g., they are minimally impacted or mentioned).\n\n"
         "AGENCIES LIST:\n"
         f"{agencies_text}\n\n"
         "Analyze the bill's content against each agency's summary to make your determination."
