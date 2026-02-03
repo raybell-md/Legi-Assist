@@ -25,13 +25,13 @@ Below are descriptions of each script in the `code` directory, including their p
 
 ### `download_legislation.py`
 
-**Purpose:**  
+**Purpose:**
 Downloads Maryland legislative data and associated PDFs for a given session year, processes cross-filed bills, and saves metadata as CSV.
 
-**Arguments:**  
+**Arguments:**
 - `session_year` (int, required): The regular session year.
 
-**Usage:**  
+**Usage:**
 ```bash
 python code/download_legislation.py 2025
 ```
@@ -45,13 +45,13 @@ python code/download_legislation.py 2025
 
 ### `leg_to_basic_txt.py`
 
-**Purpose:**  
+**Purpose:**
 Converts all bill PDFs for a session year into plain text files, one per bill.
 
-**Arguments:**  
+**Arguments:**
 - `session_year` (int, required): The regular session year.
 
-**Usage:**  
+**Usage:**
 ```bash
 python code/leg_to_basic_txt.py 2025
 ```
@@ -63,13 +63,13 @@ python code/leg_to_basic_txt.py 2025
 
 ### `leg_to_md.py`
 
-**Purpose:**  
+**Purpose:**
 Converts all bill PDFs for a session year into markdown files, preserving formatting and marking struck-through text using markdown strikethrough syntax.
 
-**Arguments:**  
+**Arguments:**
 - `session_year` (int, required): The regular session year.
 
-**Usage:**  
+**Usage:**
 ```bash
 python code/leg_to_md.py 2025
 ```
@@ -80,13 +80,13 @@ python code/leg_to_md.py 2025
 
 ### `amend_leg_md.py`
 
-**Purpose:**  
+**Purpose:**
 Uses Google Gemini 2.5 Pro to apply amendment markdown files to bill markdown files, producing amended bill markdowns.
 
-**Arguments:**  
+**Arguments:**
 - `session_year` (int, required): The regular session year (e.g., 2025).
 
-**Usage:**  
+**Usage:**
 ```bash
 python code/amend_leg_md.py 2025
 ```
@@ -98,13 +98,13 @@ python code/amend_leg_md.py 2025
 
 ### `count_tokens.py`
 
-**Purpose:**  
+**Purpose:**
 Counts the number of tokens in all basic text files for a given session year using the `tiktoken` library, and estimates the cost for LLM processing.
 
-**Arguments:**  
+**Arguments:**
 - `session_year` (int, required): The regular session year.
 
-**Usage:**  
+**Usage:**
 ```bash
 python code/count_tokens.py 2025
 ```
@@ -115,15 +115,15 @@ python code/count_tokens.py 2025
 
 ### `leg_qa.py`
 
-**Purpose:**  
+**Purpose:**
 Uses LLMs (Gemini, OpenAI GPT, or Ollama) to answer a set of policy-relevant questions about each bill, based on the bill's markdown text.
 
-**Arguments:**  
+**Arguments:**
 - `session_year` (int, required): The regular session year.
 - `--model-family` (optional, default: `gemini`): The LLM backend family to use (`gpt`, `gemini`, or `ollama`).
 - `--model` (optional): The specific model name to use (e.g., `gpt-4.1-nano`, `gemini-2.5-flash`, `llama3`).
 
-**Usage:**  
+**Usage:**
 ```bash
 python code/leg_qa.py 2025 --model-family gemini
 ```
@@ -135,6 +135,6 @@ python code/leg_qa.py 2025 --model-family gemini
 
 ## Requirements
 
-All dependencies are listed in `requirements.txt`.  
-You will need API keys for Gemini and/or OpenAI if using those LLMs.  
+All dependencies are listed in `requirements.txt`.
+You will need API keys for Gemini and/or OpenAI if using those LLMs.
 Some scripts require a `.env` file with the appropriate API keys.
