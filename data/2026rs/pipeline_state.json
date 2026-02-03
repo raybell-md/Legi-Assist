@@ -58872,248 +58872,1042 @@
     "needs_download": false,
     "needs_convert": false,
     "needs_amend": false,
-    "needs_qa": true,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0001.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "House Joint Resolution 1 honors the life, leadership, and legacy of Charles 'Charlie' James Kirk, the founder of Turning Point USA, following his death. The resolution condemns his assassination and all forms of political violence, commends law enforcement for their efforts in the investigation, and expresses condolences to his family.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "General Assembly of Maryland and the Department of Legislative Services",
+      "stakeholders": "Turning Point USA, the family of Charlie Kirk, and the general public.",
+      "fiscal_impact_summary": "As a commemorative joint resolution, this legislation has no fiscal impact on state or local government revenues or expenditures.",
+      "agency_relevance": [
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "As the principal executive agency of Maryland, the Governor's Office oversees state policy on public safety and represents the state's official position on national and constitutional issues, such as the condemnation of political violence and the protection of First Amendment rights.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Governor's Office of Crime Prevention and Policy",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution explicitly condemns political violence and extremism. As the state's central hub for public safety policy and coordinating initiatives to reduce violence, this resolution aligns with the agency's mission to address threats to public order.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Maryland State Police",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution includes a clause commending and honoring law enforcement personnel for their professional efforts. As the primary statewide law enforcement agency, this recognition is relevant to their organizational mission and public service role.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Department of Emergency Management",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution commends emergency personnel for their tireless efforts in response to the political violence mentioned. MDEM is the state's primary authority for emergency preparedness and coordinating the state's response to disasters and public safety crises.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Maryland Institute for Emergency Medical Services Systems",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution specifically commends emergency personnel. MIEMSS is responsible for overseeing and coordinating the state\u2019s emergency medical services (EMS) clinicians who provide frontline emergency response.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Maryland State Archives",
+          "is_relevant": true,
+          "relevance_explanation": "The Maryland State Archives is responsible for preserving permanent legislative records of the General Assembly, including joint resolutions such as this which record the state's historical and cultural acknowledgments.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Maryland Higher Education Commission",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution focuses on the life of an individual whose work was primarily based on college campuses and calls for leaders in education to promote civil discourse and reject violence, which relates to MHEC's role in coordinating statewide policies for higher education.",
+          "relevance_rating": 1
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-03T07:43:41.428698",
+    "qa_input_hash": "4e4fefc29baddbe5145faeec4fc4d3ddb83d3647365c7e1ecc435696009458fe",
+    "last_updated_local": "2026-02-03T07:44:43.785843",
     "bill_hash": "24083ec437f9ea7046b2f881788d78ef"
   },
   "HJ0002": {
     "last_seen": "2026-02-02T21:54:53.336249",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0002.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This joint resolution urges the United States Congress to pass federal legislation (H.R. 5356) to establish a $5 trillion National Infrastructure Bank. The proposed bank would be used to finance critical infrastructure projects across the nation and in Maryland, including repairs to structurally deficient bridges, upgrades to aging drinking water systems, and the construction of new affordable housing units, with the goal of creating 25 million jobs without requiring new federal spending or taxes.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": 0,
+      "responsible_party": "Maryland Department of Legislative Services",
+      "stakeholders": "Maryland residents, motorists, the Maryland Congressional Delegation, construction workers, and minority-owned business enterprises.",
+      "fiscal_impact_summary": "The resolution has no direct fiscal impact on Maryland state or local government finances as it is a formal expression of support for federal action and does not authorize any state expenditures or revenues.",
+      "agency_relevance": [
+        {
+          "agency_name": "Department of Transportation",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution specifically targets transportation infrastructure, including repairing bridges, fixing highways to reduce traffic congestion, expanding mass transit, and funding high-speed rail in the Northeast Corridor, which are core functions of MDOT and its sub-units like SHA and MTA.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of the Environment",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution mentions the urgent need to repair drinking water and wastewater systems, fix water breaks, and replace lead water service lines, which falls directly under MDE's responsibility for protecting public health and monitoring water systems.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Housing and Community",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution highlights Maryland's need for roughly 100,000 new units of affordable housing and identifies housing as a key sector for investment by the proposed National Infrastructure Bank.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Information Technology",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution identifies the total buildout of broadband as a priority project for the proposed bank, which aligns with DoIT's role in managing statewide broadband initiatives and connectivity.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Maryland Energy Administration",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution includes expansion of the power grid and supporting clean energy transition (via economic growth from the bank) as potential projects, which are central to MEA's mission of grid modernization and renewable energy production.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Department of Labor",
+          "is_relevant": true,
+          "relevance_explanation": "The proposed bank would mandate Davis-Bacon wages and significant job creation (25 million jobs), impacting the state's workforce development and labor standards oversight.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Governor's Office of Small, Minority & Women Business Affairs",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution mentions that the bank would ensure significant disbursements to disadvantaged business enterprises and mandate large-scale minority hiring, directly relating to this office's mission of facilitating procurement opportunities for small and minority-owned businesses.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "As the principal executive, the Governor would oversee the integration of federal funding from a national infrastructure bank. Additionally, the resolution specifically directs that a copy be sent to the Governor.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Commerce",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution argues that infrastructure investment is necessary to protect the state's economy and would lead to significant GDP growth, aligning with Commerce's mission to stimulate investment and job creation.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Board of Public Works",
+          "is_relevant": true,
+          "relevance_explanation": "The Board of Public Works approves significant state contracts and capital improvements. If a national infrastructure bank were established, the BPW would likely review state-level spending related to bank-financed projects.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Rural Maryland Council",
+          "is_relevant": true,
+          "relevance_explanation": "Infrastructure components like broadband and transportation improvements are critical challenges for rural counties, areas the Rural Maryland Council advocates for regarding grant support and development.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:53.394243",
+    "qa_input_hash": "20da4d2380fcb25f2de68a3a44e5b5726aa2023a0b7a854d709b5400d9ececda",
+    "last_updated_local": "2026-02-03T07:45:33.005864",
     "bill_hash": "69264bf5bbb72e6da2621c736d71b5c8"
   },
   "HJ0003": {
     "last_seen": "2026-02-02T21:54:53.800307",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0003.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This joint resolution establishes a state policy acknowledging the importance of a culturally diverse and inclusive curriculum in Maryland's elementary and secondary schools. It affirms the State's commitment to providing a complete education that includes the history and experiences of communities that have faced discrimination based on factors such as race, religion, sexual orientation, disability, and gender.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "Maryland State Board of Education and the State Superintendent of Schools",
+      "stakeholders": "Maryland elementary and secondary school students and teachers, as well as members of communities that have experienced discrimination based on disability, ethnicity, gender, indigenous American Tribal affiliation, race, religion, or sexual orientation.",
+      "fiscal_impact_summary": "As a joint resolution expressing the policy and intent of the General Assembly, this measure does not have a direct fiscal impact on State or local government revenues or expenditures.",
+      "agency_relevance": [
+        {
+          "agency_name": "Department of Education",
+          "is_relevant": true,
+          "relevance_explanation": "MSDE is the primary agency responsible for overseeing Maryland's public K-12 education system and setting statewide academic standards. This resolution specifically addresses the curriculum and inclusion policies within those schools.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor's Office oversees all state departments, including MSDE, and the resolution is explicitly directed to be forwarded to the Governor for executive acknowledgment.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of Disabilities",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution specifically calls for curricula to include the history and experiences of communities that have faced discrimination based on disability. MDOD serves as the state's cross-disability policy leader.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Commission on Civil Rights",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution defines state policy as providing education in a nondiscriminatory and inclusive manner. MCCR is responsible for enforcing anti-discrimination laws and providing diversity training.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Office of Community Initiatives",
+          "is_relevant": true,
+          "relevance_explanation": "GOCI manages various ethnic and cultural commissions that represent many of the diverse communities mentioned in the resolution (including African, Asian-Pacific, and Hispanic groups).",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Maryland African American Museum Corporation",
+          "is_relevant": true,
+          "relevance_explanation": "The corporation preserves and interprets the history of African American Marylanders, which is a core component of the diverse and inclusive curriculum advocated for in the resolution.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Office for Children",
+          "is_relevant": true,
+          "relevance_explanation": "The GOC leads a 'whole-of-government' approach to child well-being; the resolution's focus on inclusive education directly impacts the social and educational development of children across the state.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Maryland State Library",
+          "is_relevant": true,
+          "relevance_explanation": "The State Library Agency coordinates educational resources and support for public libraries, which may be utilized to implement and provide materials for the diverse history curricula described.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Maryland State Archives",
+          "is_relevant": true,
+          "relevance_explanation": "The Archives serves as the state's historical agency and provides public access to records that would support the robust cultural and history education proposed in the resolution.",
+          "relevance_rating": 1
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:53.865506",
+    "qa_input_hash": "4fc9f9dc6e465fee78d4024619fc48eb1a4d62c6b1923b5456a9ab862721b9a6",
+    "last_updated_local": "2026-02-03T07:46:22.261756",
     "bill_hash": "c12d2255014009ebfff5e7330ca3cf70"
   },
   "HJ0004": {
     "last_seen": "2026-02-02T21:54:54.261074",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0004.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This House Joint Resolution affirms Maryland's commitment to the safety and well-being of children in guardianship and foster care. It urges the Social Services Administration (SSA) within the Department of Human Services to strictly comply with state laws, ensure facilities are properly certified, and implement audit recommendations from the Office of Legislative Audits to address deficiencies in medical care, abuse investigations, and financial oversight.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "Social Services Administration in the Department of Human Services",
+      "stakeholders": "Children in guardianship or foster care, foster parents and providers, and local departments of social services.",
+      "fiscal_impact_summary": "The resolution notes that the Social Services Administration oversees programs for approximately 24,000 children at an annual cost of $360,000,000. However, the resolution itself is an expression of legislative intent and does not allocate or mandate additional state or local funding.",
+      "agency_relevance": [
+        {
+          "agency_name": "Department of Human Services",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution directly addresses the Social Services Administration (SSA), which is a core component of the Department of Human Services. DHS is the primary agency responsible for the programs, local department oversight, and provider management mentioned in the bill.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Office of Legislative Audits",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution specifically cites findings and recommendations from the Office of Legislative Audits and implores the Social Services Administration to implement these specific audit recommendations to safeguard children.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Governor's Office for Children",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor's Office for Children is responsible for coordinating a 'whole-of-government' approach to child well-being and aligns the efforts of various state agencies to support vulnerable families and children.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "As the principal executive agency, the Governor's Office oversees the Department of Human Services. The resolution is also formally directed to be forwarded to the Governor.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of Health",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution notes failures in ensuring that children in foster care receive required medical and dental exams, which involves standards and coordination typically managed in conjunction with public health services.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Office of Crime Prevention and Policy",
+          "is_relevant": true,
+          "relevance_explanation": "GOCPP manages funding and policy related to victim services and public safety, which intersects with the resolution's focus on protecting children from abuse and neglect.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The OAG acts as the primary legal advisor for the Department of Human Services and handles legal matters related to child welfare and protection of public interest.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:54.323070",
+    "qa_input_hash": "33f73a187e47060d2ebc37d084eacefd49e404c466519a3da8b5c3f291664651",
+    "last_updated_local": "2026-02-03T07:46:46.649239",
     "bill_hash": "ccc5db6555ee3944bb41e4edd5ea88a2"
   },
   "HJ0005": {
     "last_seen": "2026-02-02T21:54:54.707168",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0005.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This joint resolution establishes the annual salaries for the Governor and Lieutenant Governor of Maryland for the four-year term of office beginning January 20, 2027, based on recommendations from the Governor\u2019s Salary Commission.",
+      "start_year": 2027,
+      "end_year": 2031,
+      "funding": 1529000,
+      "responsible_party": "The Secretary of Budget and Management",
+      "stakeholders": "The Governor and Lieutenant Governor of Maryland",
+      "fiscal_impact_summary": "The resolution mandates specific salary schedules for the Governor and Lieutenant Governor for the term beginning in 2027. The Governor's salary is set to range from $195,000 in the first year to $210,000 in the fourth year. The Lieutenant Governor's salary is set to range from $175,000 in the first year to $185,000 in the fourth year. This will result in a total state general fund expenditure for these salaries of $1,529,000 over the four-year term.",
+      "agency_relevance": [
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution directly establishes the annual salary for the Governor for the four-year term beginning in 2027.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Lt. Governor",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution directly establishes the annual salary for the Lieutenant Governor for the four-year term beginning in 2027.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Executive Commissions, Committees, Task Forces, and Advisory Boards",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor\u2019s Salary Commission, which authored these salary recommendations and is the subject of this resolution, is a specialized study group within this category.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Budget and Management",
+          "is_relevant": true,
+          "relevance_explanation": "DBM is responsible for the state's budget and personnel system; it must account for these salary changes in future budgets and is a designated recipient of the resolution.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Maryland State Treasurer's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The State Treasurer is a constitutionally mandated member of the Governor\u2019s Salary Commission, which produced the recommendations.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Comptroller of Maryland",
+          "is_relevant": true,
+          "relevance_explanation": "The Comptroller manages the state's central payroll and will be responsible for implementing the salary adjustments for the Governor and Lieutenant Governor.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The OAG acts as the primary legal advisor to the Governor and executive commissions, providing guidance on the constitutional requirements for salary adjustments.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:54.768594",
+    "qa_input_hash": "c18ca2f17a5c265546af09b800af4cd94e29bd124dd40f2d21d711bc54c76f70",
+    "last_updated_local": "2026-02-03T07:47:20.861251",
     "bill_hash": "5839334f85916a306b16642beeb78784"
   },
   "HJ0006": {
     "last_seen": "2026-02-02T21:54:55.154386",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0006.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This joint resolution establishes a four-year schedule of salary increases for Maryland's judiciary for fiscal years 2027 through 2030, based on recommendations from the Judicial Compensation Commission. The resolution mandates annual $5,900 salary increases for judges of the Supreme Court, Appellate Court, Circuit Courts, and District Court, and provides a $7,500 annual stipend for certain administrative judges and the Chief Judge of the Appellate Court.",
+      "start_year": 2026,
+      "end_year": 2030,
+      "funding": null,
+      "responsible_party": "Judicial Compensation Commission",
+      "stakeholders": "Judges of the Maryland Supreme Court, Appellate Court, Circuit Courts, and District Court",
+      "fiscal_impact_summary": "State general fund expenditures will increase incrementally from fiscal 2027 through 2030 to cover mandated judicial salary increases of $5,900 per position each year. The resolution also establishes $7,500 annual stipends for administrative judges and the Chief Judge of the Appellate Court. While the resolution describes the individual salary levels, it does not provide an aggregate total expenditure estimate or headcount. No impact on state or local revenues is described.",
+      "agency_relevance": [
+        {
+          "agency_name": "Administrative Office of the Courts",
+          "is_relevant": true,
+          "relevance_explanation": "The Administrative Office of the Courts is the central support agency for the Maryland Judiciary, which is directly impacted by this resolution. The AOC manages the judicial budget and would be responsible for implementing the salary increases and stipends for judges across the state's court system.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Executive Commissions, Committees, Task Forces, and Advisory Boards",
+          "is_relevant": true,
+          "relevance_explanation": "This resolution is the direct result of recommendations made by the Judicial Compensation Commission, which is a specialized commission established to review and recommend salaries and pensions for the Maryland Judiciary.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Budget and Management",
+          "is_relevant": true,
+          "relevance_explanation": "DBM oversees the state's annual operating budget and estimates state revenues. The significant increases in judicial salaries for fiscal years 2027 through 2030 represent a notable fiscal impact that DBM must account for in the state's financial planning.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Maryland State Retirement Agency",
+          "is_relevant": true,
+          "relevance_explanation": "The SRA manages the retirement plans for judges. Because judicial pensions are typically based on salary, the increases mandated by this resolution will impact the actuarial liabilities and benefit distributions of the retirement system.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Comptroller of Maryland",
+          "is_relevant": true,
+          "relevance_explanation": "As the state's chief financial officer and manager of the central payroll for state employees, the Comptroller's office would be responsible for the mechanical processing and disbursement of the updated judicial salaries.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor appoints the members of the Judicial Compensation Commission and is a recipient of the final resolution. The resolution also acknowledges the Governor's role in the statutory framework governing judicial pay.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Maryland State Treasurer's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The Treasurer's office manages the state's financial assets and cash flow. While not the primary administrative agency, it safeguards the funds used to pay these salaries and maintains the state's credit health which is influenced by long-term fiscal obligations like personnel costs.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The OAG serves as the legal advisor to the Judiciary and the General Assembly, providing counsel on the interpretation and legality of the salary changes and the Commission's statutory process.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Office of Appointments",
+          "is_relevant": true,
+          "relevance_explanation": "The Office of Appointments vets candidates for judgeships. Salary levels are a factor in the recruitment and retention of qualified legal professionals for the judicial posts mentioned in the bill.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:55.219033",
+    "qa_input_hash": "79f2de995451a11f23f32e7d31b697ecbe5d1c4425314a15ead723a23bc50f70",
+    "last_updated_local": "2026-02-03T07:48:16.216330",
     "bill_hash": "20bde9cd1206370f61e482a68fe431fa"
   },
   "HJ0007": {
     "last_seen": "2026-02-02T22:35:17.602582",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\HJ0007.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This joint resolution states the General Assembly's support for the 'Back from the Brink' initiative and the Treaty on the Prohibition of Nuclear Weapons. It urges the U.S. President, the U.S. Senate, and Maryland's Congressional Delegation to take actions to reduce the threat of nuclear war, such as renouncing first-use policies, ending the President's sole launch authority, and canceling nuclear arsenal modernization.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": 0,
+      "responsible_party": "Maryland Department of Legislative Services and the Maryland Secretary of State",
+      "stakeholders": "Maryland residents, the Maryland Congressional Delegation, and the federal government (President and Senate).",
+      "fiscal_impact_summary": "The resolution has no direct fiscal impact on state or local finances. While the resolution notes that Marylanders paid an estimated $2.1 billion in federal taxes for nuclear weapons in fiscal 2024, the resolution itself does not authorize or require any state or local expenditures or affect revenues, aside from negligible administrative costs for distribution.",
+      "agency_relevance": [
+        {
+          "agency_name": "Secretary of State",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution explicitly directs the Secretary of State to send certified copies of the Joint Resolution to the President and Vice President of the United States, and to leadership in both the U.S. Senate and House of Representatives.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "International Affairs",
+          "is_relevant": true,
+          "relevance_explanation": "As a division within the Secretary of State's office, this agency manages global engagement and diplomacy. The resolution focuses on the state's stance on an international treaty and global nuclear disarmament.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Adjutant General of Maryland",
+          "is_relevant": true,
+          "relevance_explanation": "The Adjutant General is the Governor's principal advisor on state defense and national security. The resolution addresses core national security concerns and federal nuclear defense policy.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution requires a copy to be forwarded to the Governor and reflects a high-level policy stance of the state's executive and legislative branches on global security.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Emergency Management",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution focuses on reducing the catastrophic risk of nuclear war, which aligns with MDEM's mission to protect residents from man-made disasters and manage hazard mitigation.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Office of Homeland Security",
+          "is_relevant": true,
+          "relevance_explanation": "This office serves as the central body for preventing and protecting against disasters and threats. The resolution directly addresses the mitigation of global nuclear threats and national security strategy.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Veterans & Military Families",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution specifically mentions the economic hardships and food insecurity faced by military families as a justification for reducing nuclear weapons expenditures.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Department of the Environment",
+          "is_relevant": true,
+          "relevance_explanation": "The resolution identifies climate disruption and environmental catastrophe as primary consequences of nuclear weapons use, which overlaps with the department's role in monitoring environmental health and climate change.",
+          "relevance_rating": 1
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T22:35:17.625575",
+    "qa_input_hash": "9ac91134c1a0bc54390ba0e1991b7cc1179e40a38bddb6adbb22ef9914fb8d44",
+    "last_updated_local": "2026-02-03T07:49:06.514498",
     "bill_hash": "791a5debfbff94a74009148f806e0043"
   },
   "SB0010": {
     "last_seen": "2026-02-02T21:54:56.186428",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "fiscal_note": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0010_fn.pdf",
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0010.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This bill requires the State Highway Administration to approve, deny, or return as incomplete an application for the use of a speed monitoring system on a State highway within a municipal corporation within 90 days of receipt. If the Administration fails to act within this timeframe, the application is automatically deemed approved.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "State Highway Administration",
+      "stakeholders": "Maryland counties, municipal corporations, and the State Highway Administration",
+      "fiscal_impact_summary": "The bill's requirements can be handled using existing budgeted resources as the State Highway Administration's internal processes already conform to the 90-day timeframe established by the bill. Revenues are not affected, and there is no anticipated material impact on local government operations or finances.",
+      "agency_relevance": [
+        {
+          "agency_name": "State Highway Administration",
+          "is_relevant": true,
+          "relevance_explanation": "The bill explicitly mandates that the State Highway Administration (SHA) must approve, deny, or return speed monitoring system applications from counties within 90 days, or the applications are deemed approved.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Transportation",
+          "is_relevant": true,
+          "relevance_explanation": "As the parent department for the State Highway Administration, MDOT oversees the management and maintenance of state highways and ensures its business units comply with statutory administrative deadlines.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The OAG serves as the legal advisor to state agencies like the SHA and would be responsible for interpreting the new statutory timelines and handling legal matters related to 'deemed approved' applications.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:56.255242",
+    "qa_input_hash": "9d73a4693ac8d3f1f47ee69024dbb8fd029129c703a904f52587f88b81ac843c",
+    "last_updated_local": "2026-02-03T07:49:44.996640",
     "bill_hash": "e0ddc636eb13df617b27bd06f92ab485"
   },
   "SB0013": {
     "last_seen": "2026-02-02T21:54:56.667089",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0013.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This bill expands the eligibility for a refund of the unearned portion of an alcoholic beverages license fee to include license holders who are members of the U.S. Uniformed Services, specifically including members of the National Oceanic and Atmospheric Administration and the Public Health Service, who surrender their license upon volunteering for or being called into service.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "Maryland Alcohol, Tobacco, and Cannabis Commission and local alcoholic beverages licensing boards",
+      "stakeholders": "Alcoholic beverages license holders who are members of the U.S. Uniformed Services (including the National Oceanic and Atmospheric Administration and the Public Health Service) or the Maryland State militia.",
+      "fiscal_impact_summary": "The bill is expected to result in a negligible decrease in state and local revenues as it expands the eligibility for alcoholic beverages license fee refunds to a specific and likely small number of license holders.",
+      "agency_relevance": [
+        {
+          "agency_name": "Maryland Cannabis Administration",
+          "is_relevant": true,
+          "relevance_explanation": "The bill amends Article \u2013 Alcoholic Beverages and Cannabis, specifically regarding the refund of license fees. As the state agency responsible for the administration of this article and its associated regulatory functions, the Maryland Cannabis Administration (and the Alcohol, Tobacco, and Cannabis Commission it supports) is the primary entity impacted by the alteration of fee refund requirements.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The Office of the Attorney General serves as the primary legal advisor for state agencies and local licensing boards. It would be responsible for providing guidance on the interpretation and implementation of the expanded definition of 'uniformed services' to include members of the National Oceanic and Atmospheric Administration and the Public Health Service.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Comptroller of Maryland",
+          "is_relevant": true,
+          "relevance_explanation": "The Comptroller serves as the state's chief financial officer and tax collector. Because the bill involves the refund of state-mandated license fees, the Comptroller's office is relevant due to its oversight of state revenue and the fiscal processing of business-related refunds.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Maryland State Treasurer's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The State Treasurer's Office is the custodian of the state's financial assets and manages state banking services. It would be responsible for the actual disbursement and management of the funds required to fulfill the license fee refunds authorized by this legislation.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Budget and Management",
+          "is_relevant": true,
+          "relevance_explanation": "The Department of Budget and Management oversees state revenues and the fiscal impact of legislation. While the fiscal impact of this bill may be minimal, DBM is responsible for monitoring changes to fee structures and revenue outflows like license refunds.",
+          "relevance_rating": 1
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "As the principal executive agency, the Governor's Office is responsible for signing or vetoing legislation passed by the General Assembly, including this bill which impacts state licensing policy.",
+          "relevance_rating": 1
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:56.725171",
+    "qa_input_hash": "9d7c1635744a49a343cc64585e2511d55b75d95876f9a33768fe86819a71b872",
+    "last_updated_local": "2026-02-03T07:50:27.827168",
     "bill_hash": "56aee7925d6a5569bf1e3aa870082744"
   },
   "SB0018": {
     "last_seen": "2026-02-02T21:54:57.136760",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0018.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This emergency bill mandates the State Board of Social Work Examiners to issue conditional licenses to bachelor and master social work applicants who have met all education and experience requirements but have not yet passed the required examination. It establishes an alternative pathway to full licensure through the completion of 1,500 hours of supervised experience and requires the Board to set fees to cover the administrative costs of implementing these new licensing pathways.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "State Board of Social Work Examiners",
+      "stakeholders": "Initial applicants for bachelor and master social work licensure, Board-approved social work supervisors, and the State Board of Social Work Examiners.",
+      "fiscal_impact_summary": "The bill results in an increase in special fund revenues and expenditures for the State Board of Social Work Examiners to manage the new conditional licensure process and alternate pathway to full licensure. Because the Board is required to set fees for the conditional license sufficient to cover administrative costs, the impact is expected to be fiscally neutral. There is no impact on local government finances.",
+      "agency_relevance": [
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor's Office oversees all state departments and signs legislation. This bill requires the State Board of Social Work Examiners to report on the implementation and the impact of the act on the health care workforce, which is a key priority for the executive branch.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The OAG serves as the legal advisor to state agencies and boards. It will be responsible for assisting the State Board of Social Work Examiners in drafting and reviewing the new regulations required to establish the conditional licensure pathway.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Department of Budget and Management",
+          "is_relevant": true,
+          "relevance_explanation": "The bill has fiscal implications, as it requires the Board to establish fees sufficient to cover administrative costs for conditional licenses and involves reporting on the health care workforce, which falls under DBM's fiscal and personnel oversight.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of Health",
+          "is_relevant": true,
+          "relevance_explanation": "The State Board of Social Work Examiners is an entity within the Maryland Department of Health. The department is the primary agency responsible for the licensing and regulation of healthcare professionals mentioned in this bill.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Human Services",
+          "is_relevant": true,
+          "relevance_explanation": "As a major employer of social workers for child and adult welfare services, DHS is significantly impacted by changes to licensure requirements that affect the supply and qualification of its workforce.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of Juvenile Services",
+          "is_relevant": true,
+          "relevance_explanation": "DJS employs social workers to provide rehabilitative care and mental health services to youth; changes in the licensing pipeline for social workers directly affect their staffing capabilities.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Public Safety and Correctional Services",
+          "is_relevant": true,
+          "relevance_explanation": "DPSCS utilizes social workers for rehabilitation and restorative justice programs within the correctional system, making the availability of licensed social workers relevant to their operations.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Workforce Development Board",
+          "is_relevant": true,
+          "relevance_explanation": "This agency's mission is to remove barriers to employment and create pathways into high-demand careers. This bill creates a new pathway for social work licensure, directly aligning with the board's strategic goals.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Higher Education Commission",
+          "is_relevant": true,
+          "relevance_explanation": "The commission aligns academic growth with workforce needs. The bill requires the Board to consult with institutions offering social work degrees to establish standards for supervised practice.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Maryland Higher Education Commission",
+          "is_relevant": true,
+          "relevance_explanation": "MHEC oversees the colleges and universities that provide the bachelor and master's degrees required for the conditional licenses established by this bill.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Morgan State University",
+          "is_relevant": true,
+          "relevance_explanation": "As a public university with baccalaureate and master's social work programs, Morgan State's students and graduates are directly affected by the creation of new conditional licensure pathways.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "University System of Maryland",
+          "is_relevant": true,
+          "relevance_explanation": "The University System of Maryland includes several institutions with social work programs. These schools will be primary stakeholders in the Board's consultation process regarding supervised experience standards.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:57.192296",
+    "qa_input_hash": "4ca539a0f3b4e644cd7878fafb7e519c26643463d302d4c9547939ec917a29ac",
+    "last_updated_local": "2026-02-03T07:51:15.938807",
     "bill_hash": "d96924e624296826858114346aa191cf"
   },
   "SB0019": {
     "last_seen": "2026-02-02T21:54:57.781871",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "fiscal_note": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0019_fn.pdf",
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0019.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This bill establishes the Maryland Commission on Women\u2019s Health Advancement to study the feasibility of creating a State women\u2019s hospital in Southern Maryland and a statewide clinical network. The commission is tasked with analyzing healthcare gaps, assessing financial viability for hospital services, and investigating alternative care models to improve women's access to health care across their lifespans.",
+      "start_year": 2026,
+      "end_year": 2033,
+      "funding": 211800,
+      "responsible_party": "Maryland Department of Health and the Maryland Health Care Commission",
+      "stakeholders": "Women in Maryland, health care providers, patient advocates, and Maryland hospital systems.",
+      "fiscal_impact_summary": "State general fund expenditures increase by an estimated $211,800 in FY 2027 to cover the costs of one health policy analyst and $100,000 in annual contractual services for data analysis and financial assessments. Annual expenditures are projected to continue through FY 2033, while the bill has no impact on state revenues or local government finances.",
+      "agency_relevance": [
+        {
+          "agency_name": "Department of Health",
+          "is_relevant": true,
+          "relevance_explanation": "The Maryland Department of Health is responsible for jointly staffing the commission and will see a direct increase in general fund expenditures to hire a health policy analyst to support the commission's work.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Maryland Health Care Commission",
+          "is_relevant": true,
+          "relevance_explanation": "The Maryland Health Care Commission is mandated to jointly staff the commission, assess the financial viability of the proposed hospital, and initiate the Certificate of Need process.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor is responsible for appointing a majority of the commission's members, designating the chair, and receiving the commission's research plans and annual reports.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Executive Commissions, Committees, Task Forces, and Advisory Boards",
+          "is_relevant": true,
+          "relevance_explanation": "The bill establishes a new state commission to study the feasibility of healthcare infrastructure projects, falling directly under this classification of executive-branch advisory bodies.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The Attorney General or their designee is a mandated member of the commission, providing legal expertise to the feasibility study.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Morgan State University",
+          "is_relevant": true,
+          "relevance_explanation": "The university's School of Community Health and Policy is specifically designated to have a representative member on the commission.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "University System of Maryland",
+          "is_relevant": true,
+          "relevance_explanation": "The University of Maryland School of Public Health, which is part of the University System of Maryland, is specifically designated to have a representative member on the commission.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of Budget and Management",
+          "is_relevant": true,
+          "relevance_explanation": "The Department of Budget and Management will oversee the allocation of state funds and the creation of new personnel positions required by the bill at the Department of Health.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Human Services",
+          "is_relevant": true,
+          "relevance_explanation": "The Department of Human Services houses the existing Maryland Commission for Women; the bill's study of women's health gaps may coordinate with or impact the existing commission's work.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Information Technology",
+          "is_relevant": true,
+          "relevance_explanation": "The commission is required to include an information technology expert; as the state's IT strategic lead, DoIT is relevant to providing or advising on this expertise.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Maryland Insurance Administration",
+          "is_relevant": true,
+          "relevance_explanation": "The commission must include insurance professionals to provide insight into equitable financing, which aligns with the MIA's role in regulating the state's insurance industry.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:57.843873",
+    "qa_input_hash": "ab7611a2a9b826a2c4fba747f7842a6498f7d0cfe0becf9e5c0904d3132e40e5",
+    "last_updated_local": "2026-02-03T07:51:55.876679",
     "bill_hash": "3db5c1833bcaefde65f8805625810652"
   },
   "SB0021": {
     "last_seen": "2026-02-02T21:54:58.370563",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "fiscal_note": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0021_fn.pdf",
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0021.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This bill establishes that holders of a Maryland Golden Age Pass, which is available to individuals age 62 and older, are entitled to free day-use entry at State parks and are exempt from boat launch fees. It also expands the window for discounted overnight camping (half-price) to include Sundays through Thursdays. Additionally, if a park charges a per-vehicle fee, the free entry benefit applies to everyone in the vehicle with the pass holder.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "Maryland Park Service",
+      "stakeholders": "Individuals age 62 and older who possess a Maryland Golden Age Pass, and passengers traveling with them to Maryland State parks.",
+      "fiscal_impact_summary": "The bill has no state or local fiscal impact because it codifies a combination of current regulations and existing practices already implemented by the Maryland Park Service.",
+      "agency_relevance": [
+        {
+          "agency_name": "Department of Natural Resources",
+          "is_relevant": true,
+          "relevance_explanation": "The Maryland Department of Natural Resources (DNR) is the primary implementing agency. The Maryland Park Service, a unit of DNR, oversees the state park system, issues the Maryland Golden Age Pass, and will be responsible for enforcing the new access rules for day-use entry, boat launches, and discounted camping.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Aging",
+          "is_relevant": true,
+          "relevance_explanation": "The Maryland Department of Aging advocates for residents aged 60 and older. Because this bill specifically provides recreational and financial benefits to Marylanders aged 62 or older, it aligns with the agency\u2019s mission to promote independent and equitable access to state resources for seniors.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Maryland Office of Tourism Development",
+          "is_relevant": true,
+          "relevance_explanation": "As the agency responsible for promoting Maryland as a travel destination, the Office of Tourism Development uses state parks as key marketing assets. Enhancements to the Golden Age Pass for seniors support their efforts to increase tourism within the state\u2019s natural and historic landmarks.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Department of Commerce",
+          "is_relevant": true,
+          "relevance_explanation": "The Department of Commerce oversees the state's tourism initiatives and economic development. Since state parks are critical economic drivers for local communities, changes to park access and fees for specific demographics impact the overall tourism economy.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Smart, Green & Growing",
+          "is_relevant": true,
+          "relevance_explanation": "This multi-agency initiative coordinates environmental stewardship and sustainable growth efforts. Improving access to state parks for senior residents supports the initiative's goal of connecting citizens with Maryland's natural resources and public lands.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "As the principal executive agency, the Governor's Office oversees the operations of the Department of Natural Resources and is responsible for signing or vetoing legislation that alters state park policy and senior citizen benefits.",
+          "relevance_rating": 1
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:58.429842",
+    "qa_input_hash": "3c5db6301344fdcdb5e47d1fff539ff388a7f5fa7cb2ec705b2465452ea8ebb8",
+    "last_updated_local": "2026-02-03T07:52:36.611982",
     "bill_hash": "95989bf8e2619f321abaa21c7dde4b22"
   },
   "SB0026": {
     "last_seen": "2026-02-02T21:54:58.822782",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0026.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "This bill exempts 'off-grid electricity providers' from most provisions of the Public Utilities Article, including regulations, orders, and permits, provided their generating facilities do not interconnect with the Maryland electric system, cross state lines, or cross any public roadways or rights-of-way. However, these providers remain subject to state laws regarding certificates of public convenience and necessity and other required approvals for the construction of electric generating facilities.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "Maryland Public Service Commission",
+      "stakeholders": "Off-grid electricity providers, the Maryland Public Service Commission, and individuals or entities seeking to generate or consume electricity independent of the state grid.",
+      "fiscal_impact_summary": "The provided text does not include the Fiscal and Policy Note; however, the bill creates exemptions from regulatory oversight for certain electricity providers, which would likely result in a minimal impact on the Public Service Commission's administrative expenditures and revenues.",
+      "agency_relevance": [
+        {
+          "agency_name": "Public Service Commission",
+          "is_relevant": true,
+          "relevance_explanation": "As the primary regulator of public utilities in Maryland, the PSC is directly impacted by legislation that creates a new category of 'off-grid electricity providers' and exempts them from most PSC regulations, orders, and permits.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Natural Resources",
+          "is_relevant": true,
+          "relevance_explanation": "The bill explicitly requires off-grid providers to comply with CPCN requirements under \u00a7\u00a7 7\u2013207 and 7\u2013207.1. The DNR's Power Plant Research Program is a core participant in the CPCN review process for any new electric generating facilities.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Office of the People's Counsel",
+          "is_relevant": true,
+          "relevance_explanation": "The OPC advocates for residential utility consumers. Changes to the regulatory scope of the Public Utilities Article, including exemptions for certain electricity providers, fall within their mandate to monitor utility-related legislation and market impacts.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Maryland Energy Administration",
+          "is_relevant": true,
+          "relevance_explanation": "The MEA is responsible for state energy policy. The creation of a regulatory framework (or lack thereof) for off-grid electricity generation aligns with the MEA's mission to promote reliable and diverse energy sources.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of the Environment",
+          "is_relevant": true,
+          "relevance_explanation": "Because the bill retains the requirement for off-grid providers to undergo the CPCN process, the MDE remains relevant as they must review the environmental impact and issue necessary permits for any new generating facilities.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The OAG serves as the legal advisor to the Public Service Commission and other state agencies. They would be responsible for interpreting the scope of these exemptions and representing the state in any legal challenges regarding the definition of off-grid providers.",
+          "relevance_rating": 3
+        },
+        {
+          "agency_name": "Department of Transportation",
+          "is_relevant": true,
+          "relevance_explanation": "The bill's definition of an off-grid electricity provider specifically requires that the facility does not cross any state or local roadway or right-of-way, which involves MDOT's jurisdiction over state highway infrastructure.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Governor's Office",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor's Office oversees all executive agencies and is responsible for signing or vetoing legislation that significantly alters the regulatory landscape of the state's energy sector.",
+          "relevance_rating": 1
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:58.878874",
+    "qa_input_hash": "ef62ab7f1decc17e947c9713af4930a689127d5764a61516c67f8fae3a5db28a",
+    "last_updated_local": "2026-02-03T07:53:17.980860",
     "bill_hash": "8234a783ad8a44a59146ae4edce543a6"
   },
   "SB0037": {
     "last_seen": "2026-02-02T21:54:59.464506",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
-    "needs_qa": true,
+    "needs_convert": false,
+    "needs_amend": false,
+    "needs_qa": false,
     "files": {
       "fiscal_note": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0037_fn.pdf",
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0037.pdf",
       "amendments": []
     },
-    "qa_results": null,
+    "qa_results": {
+      "bill_summary": "The bill standardizes the criteria used by nonprofit training entities to disqualify participants from the Maryland Children\u2019s Service Animal Program and the Maryland Veterans Service Animal Program. It adopts the federal Americans with Disabilities Act (ADA) definition of 'direct threat' to clarify when a participant's involvement may be terminated due to safety risks to others or the animals involved.",
+      "start_year": 2026,
+      "end_year": null,
+      "funding": null,
+      "responsible_party": "Maryland Department of Health and the Department of Veterans and Military Families",
+      "stakeholders": "Children with trauma or developmental disabilities, Maryland veterans and their eligible family members, and nonprofit entities that provide service dog, support dog, or therapy horse services.",
+      "fiscal_impact_summary": "The bill has no state or local fiscal impact as the changes are technical in nature. The fiscal 2026 budget already includes $211,930 for the Maryland Veterans Service Animal Program, and this legislation does not mandate additional funding or alter existing revenues or expenditures.",
+      "agency_relevance": [
+        {
+          "agency_name": "Department of Health",
+          "is_relevant": true,
+          "relevance_explanation": "The Maryland Department of Health administers the Maryland Children\u2019s Service Animal Program. The bill directly modifies the statutory criteria used by the department and its selected nonprofit training entities to disqualify program participants.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Veterans & Military Families",
+          "is_relevant": true,
+          "relevance_explanation": "The Department of Veterans & Military Families administers the Maryland Veterans Service Animal Program. The bill modifies the disqualification protocols for veterans and their family members participating in this program.",
+          "relevance_rating": 5
+        },
+        {
+          "agency_name": "Department of Disabilities",
+          "is_relevant": true,
+          "relevance_explanation": "As the state's cross-disability policy leader, the Department of Disabilities is impacted by the bill's alignment of service animal programs with the federal Americans with Disabilities Act (ADA) 'direct threat' standard, which is also used in the Maryland Disability Service Animal Program administered by the department.",
+          "relevance_rating": 4
+        },
+        {
+          "agency_name": "Governor's Office for Children",
+          "is_relevant": true,
+          "relevance_explanation": "The Governor's Office for Children leads the state's efforts to improve well-being for children with trauma and disabilities, which is the specific demographic served by the Maryland Children's Service Animal Program mentioned in the bill.",
+          "relevance_rating": 2
+        },
+        {
+          "agency_name": "Office of the Attorney General",
+          "is_relevant": true,
+          "relevance_explanation": "The Office of the Attorney General serves as the primary legal advisor to the state departments mentioned in the bill and would provide counsel on the interpretation and implementation of the ADA 'direct threat' definition within state-funded programs.",
+          "relevance_rating": 2
+        }
+      ]
+    },
     "amended_status": "original",
     "amend_input_hash": null,
-    "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:54:59.508513",
+    "qa_input_hash": "c072631858589953733f87285a4af51659365ed2bb2271eef55b95d2c84ac265",
+    "last_updated_local": "2026-02-03T07:54:06.763853",
     "bill_hash": "484cd4e70482b74781a1c6a956cb28aa"
   },
   "SB0039": {
     "last_seen": "2026-02-02T21:55:00.045847",
     "needs_download": false,
-    "needs_convert": true,
-    "needs_amend": true,
+    "needs_convert": false,
+    "needs_amend": false,
     "needs_qa": true,
     "files": {
       "bill_pdf": "C:\\git\\Legi-Scanner\\data\\2026rs\\pdf\\SB0039.pdf",
@@ -59123,7 +59917,7 @@
     "amended_status": "original",
     "amend_input_hash": null,
     "qa_input_hash": null,
-    "last_updated_local": "2026-02-02T21:55:00.105399",
+    "last_updated_local": "2026-02-03T07:54:07.663517",
     "bill_hash": "e138cb4bc30964966a97d72db12599c3"
   },
   "SB0042": {
