@@ -33,6 +33,7 @@ def main():
     parser.add_argument('--year', type=int, default=2026, help='Session Year')
     parser.add_argument('--model-family', default='gemini', choices=['gemini', 'gpt', 'ollama'])
     parser.add_argument('--model', default='gemini-3-flash-preview', help='Model Name')
+    parser.add_argument('--debug', action='store_true', help='Limit processing to first 10 bills')
     args = parser.parse_args()
 
     print(f"--- Starting Pipeline for {args.year} ---")
@@ -46,6 +47,10 @@ def main():
     # 3. Download Stage
     # This returns all bills, but updates state for new ones
     all_bills = download_session_data(args.year, state)
+    
+    if args.debug:
+        print("Debug mode: Limiting processing to first 10 bills.")
+        all_bills = all_bills[:10]
     
     # 4. Process Loop
     # We iterate through all known bills and check their 'needs_*' flags
