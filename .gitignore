@@ -178,3 +178,6 @@ node_modules
 
 # Ignore all PDFs
 data/**/*.pdf
+
+# Ignore iframe testing
+legi-assist
