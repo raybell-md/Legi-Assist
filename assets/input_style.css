@@ -9,8 +9,17 @@ html {
 
 html, body {
     height: 100%;
-    height: -webkit-fill-available;
+    height: 100dvh; /* Modern mobile browsers */
     overflow: hidden;
+    width: 100%;
+}
+
+/* Fallback for older browsers */
+@supports not (height: 100dvh) {
+    html, body {
+        height: 100vh;
+        height: -webkit-fill-available;
+    }
 }
 
 body {
@@ -151,19 +160,6 @@ article:focus-within {
 }
 .fade-enter-from, .fade-leave-to {
     opacity: 0;
-}
-
-/* iOS flexbox card height fix */
-.space-y-3 > article,
-.space-y-4 > article {
-    height: auto !important;
-    flex-shrink: 0;
-}
-
-/* Ensure button inside card doesn't stretch */
-article > button {
-    height: auto;
-    align-self: flex-start;
 }
 
 /* iframe-specific fixes */
