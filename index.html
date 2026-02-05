@@ -413,7 +413,8 @@
                                         <dt class="text-[10px] font-bold text-slate-600 uppercase">Current Status</dt>
                                         <dd class="text-xs sm:text-sm font-medium text-red-800">{{ activeBill.Status }}</dd>
                                     </div>
-                                    <div v-if="activeBill.funding !== null">
+
+                                    <div v-if="activeBill.funding != null">
                                         <dt class="text-[10px] font-bold text-slate-600 uppercase">Est. Funding Impact</dt>
                                         <dd class="text-base sm:text-lg font-black text-emerald-700">{{ formatCurrency(activeBill.funding) }}</dd>
                                     </div>
