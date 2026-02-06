@@ -480,8 +480,8 @@
                                     <div class="display-flex flex-column flex-1 padding-3">
                                         <div class="maryland-card__header padding-0 margin-bottom-1">
 
-                                            <div class="margin-bottom-05">
-                                                <h2 class="font-serif-xl text-bold text-primary line-height-sans-2 margin-0">
+                                            <div class="margin-bottom-2">
+                                                <h2 class="font-sans-xl text-bold text-primary line-height-sans-2 margin-0">
                                                     {{ bill.BillNumber }}{{ bill.CrossfileBillNumber ? ' / ' + bill.CrossfileBillNumber : '' }}
                                                 </h2>
                                             </div>
@@ -490,7 +490,7 @@
                                                 {{ bill.Title }}
                                             </h3>
 
-                                            <div class="display-flex flex-wrap flex-align-center gap-1 margin-top-3">
+                                            <div class="display-flex flex-wrap flex-align-center gap-1 margin-top-2">
                                                 <span v-if="selectedYear === 2026 && getNextAction(bill)" class="inline-flex flex-align-center gap-1 bg-accent-warm-lighter text-base-darker padding-x-105 padding-y-05 radius-md font-sans-xs text-bold border border-accent-warm-light">
                                                     <i class="ph ph-calendar-blank text-md"></i>
                                                     {{ getNextAction(bill).label }}: {{ formatDate(getNextAction(bill).date) }} 
