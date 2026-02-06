@@ -374,7 +374,7 @@
                         <button 
                             @click="exportToExcel" 
                             class="usa-button usa-button--unstyled display-flex flex-align-center flex-justify-center width-4 height-4 text-base-darker hover:text-primary radius-pill hover:bg-base-lightest transition-colors"
-                            aria-label="Export Results to CSV"
+                            aria-label="Download Results CSV"
                         >
                             <i class="ph ph-download-simple text-xl"></i>
                         </button>
@@ -421,7 +421,7 @@
                             class="usa-button usa-button--outline bg-white hover:bg-base-lightest display-flex flex-align-center gap-1 margin-0"
                             style="height: 2.5rem;"
                         >
-                            <i class="ph ph-download-simple text-lg text-primary"></i> Export CSV
+                            <i class="ph ph-download-simple text-lg text-primary"></i> Download CSV
                         </button>
                      </div>
                  </div>
@@ -1581,7 +1581,7 @@
                         Narrow_Subjects: b.NarrowSubjects?.map(s => s.Name).join('; ') || ''
                     }));
                     if (rows.length === 0) {
-                        announceToScreenReader('No bills to export.');
+                        announceToScreenReader('No bills to download.');
                         return;
                     }
                     const header = Object.keys(rows[0]).join(',');
@@ -1594,7 +1594,7 @@
                     link.download = `MD_Legislation_Export_${selectedYear.value}.csv`;
                     link.click();
                     setTimeout(() => URL.revokeObjectURL(link.href), 100);
-                    announceToScreenReader(`Export complete. ${rows.length} bills downloaded as CSV.`);
+                    announceToScreenReader(`Download complete. ${rows.length} bills downloaded as CSV.`);
                 };
 
                 const focusFirstOption = () => {
