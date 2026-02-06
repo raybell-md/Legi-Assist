@@ -1149,7 +1149,8 @@
                     fetchData();
                     currentView.value = 'dashboard';
                     window.scrollTo(0, 0);
-                    updateUrl();
+                    // Push a new history entry so Back/Forward navigates between landing/dashboard
+                    updateUrl(true);
                 };
 
                 const updateUrl = (usePushState = false) => {
@@ -1752,7 +1753,11 @@
                     window.addEventListener('popstate', (event) => {
                         // Skip if embedded - let parent iframe wrapper handle via postMessage
                         if (window.parent !== window) return;
-                        
+
+                        // Re-initialize view/filter state from the URL when the user navigates
+                        // with the browser Back/Forward buttons so landing <-> dashboard toggles correctly.
+                        initFromUrl();
+
                         const params = new URLSearchParams(window.location.search);
                         const billId = params.get('bill');
                         if (billId) {
