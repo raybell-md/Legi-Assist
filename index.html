@@ -181,7 +181,7 @@
                 <div class="flex-1 overflow-y-auto padding-3">
                     <div class="display-flex flex-justify-between flex-align-center margin-bottom-2 width-full">
                         <h2 class="font-sans-lg text-bold margin-0" style="outline: none;" ref="filtersHeading" tabindex="-1">Filters</h2>
-                        <button @click="clearFilters" class="usa-button usa-button--unstyled font-sans-3xs text-uppercase text-primary hover:text-primary-dark margin-left-auto underline" v-if="activeFilterCount > 0">Clear All</button>
+                        <button @click="clearFilters" class="usa-button usa-button--unstyled font-sans-3xs text-uppercase text-primary hover:text-primary-dark margin-left-auto underline padding-right-0" v-if="activeFilterCount > 0">Clear All</button>
                     </div>
 
                      <div class="margin-bottom-3">
@@ -530,7 +530,7 @@
                         <div class="padding-2 border-bottom border-base-lighter flex justify-between items-center bg-base-lightest w-full">
                             <h2 id="drawer-title" ref="mobileFiltersHeading" tabindex="-1" class="font-bold text-lg text-base-dark margin-0" style="outline: none;">Filters</h2>
                             <div class="flex items-center gap-3">
-                                <button @click="clearFilters" class="usa-button usa-button--unstyled font-sans-3xs text-uppercase text-primary hover:text-primary-dark underline" v-if="activeFilterCount > 0">Clear All</button>
+                                <button @click="clearFilters" class="usa-button usa-button--unstyled font-sans-3xs text-uppercase text-primary hover:text-primary-dark underline padding-right-0" v-if="activeFilterCount > 0">Clear All</button>
                                 <button @click="showFilterDrawer = false" aria-label="Close filters" class="usa-button usa-button--unstyled text-base-dark hover:text-primary margin-0"><i class="ph ph-x text-xl" aria-hidden="true"></i></button>
                             </div>
                         </div>
