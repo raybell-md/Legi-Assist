@@ -126,11 +126,10 @@
                 <!-- Filters Scroll Area -->
                 <div class="flex-1 overflow-y-auto padding-3">
                      <div class="display-flex flex-justify-between flex-align-center margin-bottom-2">
-                        <h2 class="font-sans-lg text-bold margin-0">Filters</h2>
+                        <h2 class="font-sans-lg text-bold margin-0" style="outline: none;" ref="filtersHeading" tabindex="-1">Filters</h2>
                         <button @click="clearFilters" class="usa-button usa-button--unstyled font-sans-3xs text-uppercase text-primary hover:text-primary-dark" v-if="activeFilterCount > 0">Clear All</button>
                      </div>
 
-                     <!-- Session -->
                      <div class="margin-bottom-3">
                          <label class="usa-label margin-top-0" for="session-select">Session</label>
                          <select id="session-select" v-model="selectedYear" @change="fetchData" class="usa-select margin-top-1 width-full">
@@ -140,7 +139,6 @@
                      
                      <hr class="border-base-lighter margin-y-3">
 
-                    <!-- Agency Search -->
                     <div ref="agencyFilterContainer" class="margin-bottom-3 position-relative" @focusout="handleFocusOut('agency', $event)">
                         <label class="usa-label margin-top-0" for="agency-filter-input">Filter by Agency</label>
                         <div class="position-relative margin-top-1">
@@ -167,7 +165,7 @@
                                 class="usa-button usa-button--unstyled position-absolute text-base-light hover:text-primary display-flex flex-align-center flex-justify-center"
                                 style="top: 50%; right: 0.5rem; transform: translateY(-50%); width: 2rem; height: 2rem;"
                             >
-                                <i class="ph-fill ph-x-circle text-xl"></i>
+                                <i class="ph-fill ph-x-circle text-xl" aria-hidden="true"></i>
                             </button>
                         </div>
 
@@ -191,8 +189,8 @@
                         </ul>
 
                         <div v-if="selectedAgency" class="margin-top-2 padding-2 bg-primary-lighter radius-md border border-primary-light">
-                            <label class="usa-label margin-top-0 text-primary-darker font-sans-3xs uppercase">Relevance Threshold</label>
-                            <select v-model="filterRating" class="usa-select margin-top-05 height-auto py-1 font-sans-2xs">
+                            <label class="usa-label margin-top-0 text-primary-darker font-sans-3xs uppercase" for="agency-relevance-select">Relevance Threshold</label>
+                            <select id="agency-relevance-select" v-model="filterRating" class="usa-select margin-top-05 height-auto py-1 font-sans-2xs">
                                 <option value="all">All Relevance Levels</option>
                                 <option value="5">Primary - 5</option>
                                 <option value="4">High - 4+</option>
@@ -204,7 +202,6 @@
 
                     <hr class="border-base-lighter margin-y-3">
 
-                    <!-- Sponsor Search -->
                     <div ref="sponsorFilterContainer" class="margin-bottom-3 position-relative" @focusout="handleFocusOut('sponsor', $event)">
                         <label class="usa-label margin-top-0" for="sponsor-filter-input">Filter by Sponsor</label>
                         <div class="position-relative margin-top-1">
@@ -230,7 +227,7 @@
                                 class="usa-button usa-button--unstyled position-absolute text-base-light hover:text-primary display-flex flex-align-center flex-justify-center"
                                 style="top: 50%; right: 0.5rem; transform: translateY(-50%); width: 2rem; height: 2rem;"
                             >
-                                <i class="ph-fill ph-x-circle text-xl"></i>
+                                <i class="ph-fill ph-x-circle text-xl" aria-hidden="true"></i>
                             </button>
                         </div>
 
@@ -256,14 +253,12 @@
 
                      <hr class="border-base-lighter margin-y-3">
 
-                     <!-- Keyword -->
                      <div class="margin-bottom-3">
                         <label class="usa-label margin-top-0" for="keyword-search">Keyword Search</label>
                         <input v-model="searchQuery" id="keyword-search" type="text" class="usa-input margin-top-0 width-full" placeholder="Title, summary, ID...">
                      </div>
 
-                     <!-- Broad Subjects -->
-                    <fieldset class="usa-fieldset margin-bottom-3">
+                     <fieldset class="usa-fieldset margin-bottom-3">
                         <legend class="usa-label margin-top-0 margin-bottom-1">Broad Subjects</legend>
                         <input 
                             v-model="broadSubjectSearch" 
@@ -283,7 +278,6 @@
                         </div>
                     </fieldset>
 
-                    <!-- Narrow Subjects -->
                     <fieldset class="usa-fieldset">
                         <legend class="usa-label margin-top-0 margin-bottom-1">Narrow Subjects</legend>
                         <input 
@@ -306,14 +300,13 @@
 
                     <hr class="border-base-lighter margin-y-3">
 
-                    <!-- Innovation Team Info -->
                     <div class="padding-2 bg-base-lightest radius-md border border-base-lighter">
                          <div class="display-flex flex-align-center gap-1 margin-bottom-1">
                              <span class="font-sans-xs text-bold text-base-darker leading-tight">Built by the Maryland State Innovation Team</span>
                          </div>
                          <a href="https://innovation.maryland.gov" target="_blank" class="font-sans-xs text-primary hover:text-primary-dark text-bold display-flex flex-align-center gap-1 margin-top-1">
                              Learn more at innovation.maryland.gov
-                             <i class="ph ph-arrow-square-out"></i>
+                             <i class="ph ph-arrow-square-out" aria-hidden="true"></i>
                          </a>
                     </div>
                 </div>
@@ -403,7 +396,7 @@
 
                      <div v-else class="grid-container padding-0 desktop:padding-x-4 width-full">
 
-                        <div class="desktop:display-none padding-bottom-2 margin-bottom-2 border-bottom border-base-lighter text-center">
+                        <div class="desktop:display-none padding-bottom-2 margin-bottom-2 border-bottom border-base-lighter text-center" role="status" aria-live="polite">
                             <span class="font-sans-xs text-base-default text-italic">{{ filteredBills.length }} Results</span>
                         </div>
 
@@ -473,13 +466,12 @@
                     <aside ref="filterDrawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" @keydown="trapFocusDrawer" class="position-absolute inset-y-0 left-0 width-full bg-white shadow-3 display-flex flex-column" style="width: 85vw; max-width: 20rem;">
                         <div class="padding-2 border-bottom border-base-lighter flex justify-between items-center bg-base-lightest w-full">
                             <div class="flex items-center gap-2">
-                                <h2 id="drawer-title" class="font-bold text-lg text-base-dark margin-0">Filters</h2>
+                                <h2 id="drawer-title" ref="mobileFiltersHeading" tabindex="-1" class="font-bold text-lg text-base-dark margin-0" style="outline: none;">Filters</h2>
                                 <button @click="clearFilters" class="usa-button usa-button--unstyled font-sans-3xs text-uppercase text-primary hover:text-primary-dark" v-if="activeFilterCount > 0">Clear All</button>
                             </div>
-                            <button @click="showFilterDrawer = false" class="usa-button usa-button--unstyled text-base-dark hover:text-primary margin-0"><i class="ph ph-x text-xl"></i></button>
+                            <button @click="showFilterDrawer = false" aria-label="Close filters" class="usa-button usa-button--unstyled text-base-dark hover:text-primary margin-0"><i class="ph ph-x text-xl" aria-hidden="true"></i></button>
                         </div>
                         <div class="padding-2 flex-1 overflow-y-auto">
-                            <!-- Sort -->
                             <div v-if="selectedYear === 2026 || selectedAgency" class="margin-bottom-3">
                                 <label class="usa-label margin-top-0" for="drawer-sort">Sort Order</label>
                                 <select v-model="sortBy" id="drawer-sort" class="usa-select width-full">
@@ -491,23 +483,22 @@
                             </div>
 
                         <hr v-if="selectedYear === 2026 || selectedAgency" class="border-base-lighter margin-y-3">
-                            <!-- Year -->
                             <div class="margin-bottom-3">
-                                 <label class="usa-label margin-top-0">Session</label>
-                                 <select v-model="selectedYear" @change="fetchData" class="usa-select width-full">
+                                 <label class="usa-label margin-top-0" for="mobile-year-select">Session</label>
+                                 <select v-model="selectedYear" id="mobile-year-select" @change="fetchData" class="usa-select width-full">
                                      <option v-for="year in [2026, 2025, 2024, 2023]" :value="year">{{ year }}</option>
                                  </select>
                             </div>
                             
-                            <!-- Agency Mobile -->
                             <div class="margin-bottom-3" @focusout="handleFocusOut('agency', $event)">
-                                <label class="usa-label margin-top-0">Filter by Agency</label>
+                                <label class="usa-label margin-top-0" for="mobile-agency-input">Filter by Agency</label>
                                 <input 
                                     v-model="agencySearch" 
                                     @focus="showAgencyList = true"
                                     @input="showAgencyList = true"
                                     @keydown.escape="showAgencyList = false"
                                     type="text"
+                                    id="mobile-agency-input"
                                     role="combobox"
                                     aria-autocomplete="list"
                                     aria-controls="mobile-agency-results-list"
@@ -519,11 +510,11 @@
                                 <div v-if="selectedAgency" class="padding-1 bg-primary-lighter text-primary-darker radius-md border-1px border-primary-light margin-bottom-1">
                                     <div class="display-flex flex-align-center flex-justify-between font-sans-2xs text-bold margin-bottom-1">
                                         {{ agencySearch }}
-                                        <button @click="clearAgency" class="usa-button usa-button--unstyled text-primary"><i class="ph ph-x-circle text-lg"></i></button>
+                                        <button @click="clearAgency" aria-label="Clear selected agency" class="usa-button usa-button--unstyled text-primary"><i class="ph ph-x-circle text-lg" aria-hidden="true"></i></button>
                                     </div>
 
-                                    <label class="usa-label margin-top-0 text-primary-darker font-sans-3xs uppercase">Relevance Threshold</label>
-                                    <select v-model="filterRating" class="usa-select margin-top-05 height-auto py-1 font-sans-2xs width-full bg-white">
+                                    <label class="usa-label margin-top-0 text-primary-darker font-sans-3xs uppercase" for="mobile-relevance-select">Relevance Threshold</label>
+                                    <select v-model="filterRating" id="mobile-relevance-select" class="usa-select margin-top-05 height-auto py-1 font-sans-2xs width-full bg-white">
                                         <option value="all">All Relevance Levels</option>
                                         <option value="5">Primary - 5</option>
                                         <option value="4">High - 4+</option>
@@ -555,15 +546,15 @@
                             
                             <hr class="border-base-lighter margin-y-2">
                             
-                            <!-- Sponsor Mobile -->
                             <div class="margin-bottom-3" @focusout="handleFocusOut('sponsor', $event)">
-                                <label class="usa-label margin-top-0">Filter by Sponsor</label>
+                                <label class="usa-label margin-top-0" for="mobile-sponsor-input">Filter by Sponsor</label>
                                 <input 
                                     v-model="sponsorSearch" 
                                     @focus="showSponsorList = true"
                                     @input="showSponsorList = true"
                                     @keydown.escape="showSponsorList = false"
                                     type="text" 
+                                    id="mobile-sponsor-input"
                                     role="combobox"
                                     aria-autocomplete="list"
                                     aria-controls="mobile-sponsor-results-list"
@@ -574,7 +565,7 @@
 
                                 <div v-if="selectedSponsor" class="display-flex flex-align-center flex-justify-between padding-1 bg-primary-lighter text-primary-darker radius-md font-sans-2xs text-bold border-1px border-primary-light margin-bottom-1">
                                     {{ sponsorSearch }}
-                                    <button @click="clearSponsor" class="usa-button usa-button--unstyled text-primary"><i class="ph ph-x-circle text-lg"></i></button>
+                                    <button @click="clearSponsor" aria-label="Clear selected sponsor" class="usa-button usa-button--unstyled text-primary"><i class="ph ph-x-circle text-lg" aria-hidden="true"></i></button>
                                 </div>
 
                                 <div 
@@ -600,14 +591,12 @@
 
                             <hr class="border-base-lighter margin-y-2">
 
-                            <!-- Keyword -->
                             <div class="margin-bottom-3">
-                                <label class="usa-label margin-top-0">Keyword Search</label>
-                                <input v-model="searchQuery" type="text" class="usa-input width-full" placeholder="Title, summary, ID...">
+                                <label class="usa-label margin-top-0" for="mobile-keyword-input">Keyword Search</label>
+                                <input v-model="searchQuery" id="mobile-keyword-input" type="text" class="usa-input width-full" placeholder="Title, summary, ID...">
                             </div>
                             
-                             <!-- Subjects -->
-                            <fieldset class="usa-fieldset margin-bottom-3">
+                             <fieldset class="usa-fieldset margin-bottom-3">
                                 <legend class="usa-label margin-top-0 margin-bottom-1">Broad Subjects</legend>
                                 <input 
                                     v-model="broadSubjectSearch" 
@@ -649,7 +638,6 @@
 
                             <hr class="border-base-lighter margin-y-3">
 
-                            <!-- Innovation Team Info -->
                             <div class="padding-2 bg-base-lightest radius-md border border-base-lighter">
                                  <div class="display-flex flex-align-center gap-1 margin-bottom-1">
                                      <div class="width-4 height-4 bg-black circle display-flex flex-justify-center flex-align-center text-white font-sans-3xs text-bold shrink-0">IT</div>
@@ -657,7 +645,7 @@
                                  </div>
                                  <a href="https://innovation.maryland.gov" target="_blank" class="font-sans-xs text-primary hover:text-primary-dark text-bold display-flex flex-align-center gap-1 margin-top-1">
                                      Learn more at innovation.maryland.gov
-                                     <i class="ph ph-arrow-square-out"></i>
+                                     <i class="ph ph-arrow-square-out" aria-hidden="true"></i>
                                  </a>
                             </div>
                         </div>
@@ -890,6 +878,8 @@
                 const showFilterDrawer = ref(false);
                 const drawerReady = ref(false);
                 const modalTitle = ref(null);
+                const filtersHeading = ref(null);
+                const mobileFiltersHeading = ref(null);
                 const agencyFilterContainer = ref(null);
                 const sponsorFilterContainer = ref(null);
                 const filterDrawer = ref(null);
@@ -956,7 +946,7 @@
                     }
                 };
 
-                const clearFilters = () => {
+                const clearFilters = async () => {
                     searchQuery.value = "";
                     agencySearch.value = "";
                     selectedAgency.value = "";
@@ -969,6 +959,14 @@
                     filterRating.value = "all";
                     sortBy.value = "date";
                     updateUrl();
+
+                    // A11y: Manage focus so it doesn't get lost when the button disappears
+                    await nextTick();
+                    if (showFilterDrawer.value && mobileFiltersHeading.value) {
+                        mobileFiltersHeading.value.focus();
+                    } else if (filtersHeading.value) {
+                        filtersHeading.value.focus();
+                    }
                 };
 
                 watch([searchQuery, filterBroad, filterNarrow, sortBy, filterRating, selectedSponsor], () => { updateUrl(); });
@@ -1661,6 +1659,7 @@
                     formatDate, formatTime, formatTimestamp, isNew, exportToExcel, fetchData, getNextAction, getTestimonyDeadline,
                     modalTitle, trapFocus, trapFocusDrawer, clearAgency, clearSponsor, clearFilters, agencyFilterContainer, sponsorFilterContainer,
                     filterDrawer, focusFirstOption, announceToScreenReader,
+                    filtersHeading, mobileFiltersHeading,
                     currentView, enterDashboard, handleFocusOut, scrollToFocusedItem
                 };
             }
